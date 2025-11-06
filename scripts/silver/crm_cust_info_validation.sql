@@ -1,30 +1,13 @@
-/*====================================================================
-Script Name  : Silver Layer Data Quality Checks - CRM Customer Info
-Purpose      : To validate the data quality, standardization, and 
-               consistency of the 'silver.crm_cust_info' table.
-               
-Description  :
-This script performs key data quality checks after transforming 
-data from the Bronze Layer into the Silver Layer. It ensures that 
-the CRM Customer Information table is clean, standardized, and 
-ready for downstream analytical processing.
-
-Checks Included:
-1. Primary Key Validation:
-   - Ensures no NULLs or duplicate values in the 'cst_id' column.
-2. Data Cleanliness:
-   - Detects leading or trailing spaces in text fields.
-3. Data Standardization:
-   - Verifies consistent values for gender and marital status.
-     Expected Values:
-       • Gender → 'Male', 'Female', 'Unknown'
-       • Marital Status → 'Single', 'Married', 'Unknown'
-4. Final Review:
-   - Displays cleaned records for verification.
-
-Expected Result:
-- No records should appear in error-check queries.
-====================================================================*/
+/*==============================================================
+Script Name : Silver Layer Data Quality Checks - CRM Customer Info
+Purpose     : To validate data consistency and standardization in 
+              'silver.crm_cust_info'.
+Checks      :
+  1. Duplicates or NULLs in Primary Key (cst_id)
+  2. Unwanted spaces in text columns
+  3. Standard values for Gender & Marital Status
+Expected    : No invalid records found
+==============================================================*/
 
 -- Check for nulls or duplicates in Primary key
 -- Expectation : No Result
