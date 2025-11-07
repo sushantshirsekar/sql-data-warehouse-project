@@ -31,3 +31,8 @@ WHERE gen != TRIM(gen);
 SELECT DISTINCT
 	gen
 FROM silver.erp_cust_az12;
+
+
+-- 5. Final data review
+SELECT * 
+FROM silver.erp_cust_az12;
