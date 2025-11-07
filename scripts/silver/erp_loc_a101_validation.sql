@@ -21,3 +21,8 @@ SELECT
 FROM silver.erp_loc_a101
 GROUP BY cntry
 ORDER BY cntry;
+
+
+-- 3. Final data review
+SELECT * 
+FROM silver.erp_loc_a101;
