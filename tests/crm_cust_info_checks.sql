@@ -7,6 +7,10 @@ Checks      :
   2. Unwanted spaces in text columns
   3. Standard values for Gender & Marital Status
 Expected    : No invalid records found
+
+Usage Notes: 
+	- Run these checks after loading data into silver layer.
+	- Investigate and resolve any discripancies found during the checks.
 ==============================================================*/
 
 -- Check for nulls or duplicates in Primary key
