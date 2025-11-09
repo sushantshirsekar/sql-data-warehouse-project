@@ -2,6 +2,11 @@
 Script Name : Silver Layer Data Validation - ERP Location Info
 Purpose     : To ensure customer linkage and country data consistency 
               in 'silver.erp_loc_a101' after transformation.
+Description : Performs key quality checks to ensure data accuracy 
+              and consistency in the Silver Layer.
+Usage Notes: 
+	- Run these checks after loading data into silver layer.
+	- Investigate and resolve any discripancies found during the checks.
 ==============================================================*/
 
 -- 1. Validate Customer ID integrity (must exist in CRM Customer Info)
