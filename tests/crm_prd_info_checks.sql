@@ -4,6 +4,9 @@ Purpose     : To validate standardized product data in
               'silver.crm_prd_info' after transformation from Bronze.
 Description : Performs key quality checks to ensure data accuracy 
               and consistency in the Silver Layer.
+Usage Notes: 
+	- Run these checks after loading data into silver layer.
+	- Investigate and resolve any discripancies found during the checks.
 ==============================================================*/
 
 -- 1. Check for nulls or duplicate product IDs
