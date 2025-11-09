@@ -2,6 +2,11 @@
 Script Name : Silver Layer Data Validation - ERP Product Category
 Purpose     : To validate data quality and consistency in 
               'silver.erp_px_cat_g1v2' table.
+Description : Performs key quality checks to ensure data accuracy 
+              and consistency in the Silver Layer.
+Usage Notes: 
+	- Run these checks after loading data into silver layer.
+	- Investigate and resolve any discripancies found during the checks.
 ==============================================================*/
 
 -- 1. Validate ID length and consistency
