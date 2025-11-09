@@ -2,6 +2,11 @@
 Script Name : Silver Layer Data Validation - Sales Details
 Purpose     : To verify data integrity, consistency, and validity 
               in 'silver.crm_sales_details' after transformation.
+Description : Performs key quality checks to ensure data accuracy 
+              and consistency in the Silver Layer.
+Usage Notes: 
+	- Run these checks after loading data into silver layer.
+	- Investigate and resolve any discripancies found during the checks.
 ==============================================================*/
 
 -- 1. Check for unwanted spaces in Order Number
