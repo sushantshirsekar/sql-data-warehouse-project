@@ -2,6 +2,11 @@
 Script Name : Silver Layer Data Validation - ERP Customer Info
 Purpose     : To verify data integrity, consistency, and validity 
               in 'silver.erp_cust_az12' after transformation.
+Description : Performs key quality checks to ensure data accuracy 
+              and consistency in the Silver Layer.
+Usage Notes: 
+	- Run these checks after loading data into silver layer.
+	- Investigate and resolve any discripancies found during the checks.
 ==============================================================*/
 
 -- 1. Check for inconsistent Customer ID lengths
