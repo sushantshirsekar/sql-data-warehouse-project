@@ -37,49 +37,49 @@ Even though this project is SQL-only, it demonstrates how data flows from **raw 
 
 ## 🧱 Project Folder Structure
 
-
 SQL-Data-Warehouse/
 │
 ├── datasets/
-│ ├── crm/
-│ │ ├── crm_cust_info.csv
-│ │ ├── crm_prd_info.csv
-│ │ └── crm_sales_details.csv
-│ │
-│ ├── erp/
-│ ├── erp_cust_az12.csv
-│ ├── erp_loc_a101.csv
-│ └── erp_px_cat_g1v2.csv
+│   ├── crm/
+│   │   ├── crm_cust_info.csv
+│   │   ├── crm_prd_info.csv
+│   │   └── crm_sales_details.csv
+│   │
+│   └── erp/
+│       ├── erp_cust_az12.csv
+│       ├── erp_loc_a101.csv
+│       └── erp_px_cat_g1v2.csv
 │
 ├── docs/
-│ ├── data_architecture.png
-│ ├── data_catalog.md
-│ ├── data_flow.png
-│ ├── data_integration.png
-│ └── data_model.png
+│   ├── data_architecture.png
+│   ├── data_catalog.md
+│   ├── data_flow.png
+│   ├── data_integration.png
+│   └── data_model.png
 │
 ├── scripts/
-│ ├── bronze/
-│ │ ├── ddl_bronze.sql
-│ │ └── proc_load_bronze.sql
-│ │
-│ ├── silver/
-│ │ └── init_database.sql
-│ │
-│ └── gold/
-│ └── ddl_gold.sql
+│   ├── bronze/
+│   │   ├── ddl_bronze.sql
+│   │   └── proc_load_bronze.sql
+│   │
+│   ├── silver/
+│   │   └── init_database.sql
+│   │
+│   └── gold/
+│       └── ddl_gold.sql
 │
 ├── tests/
-│ ├── crm_cust_info_checks.sql
-│ ├── crm_prd_info_checks.sql
-│ ├── crm_sales_details_checks.sql
-│ ├── erp_cust_az12_checks.sql
-│ ├── erp_loc_a101_checks.sql
-│ ├── erp_px_cat_g1v2_checks.sql
-│ └── quality_checks_gold.sql
+│   ├── crm_cust_info_checks.sql
+│   ├── crm_prd_info_checks.sql
+│   ├── crm_sales_details_checks.sql
+│   ├── erp_cust_az12_checks.sql
+│   ├── erp_loc_a101_checks.sql
+│   ├── erp_px_cat_g1v2_checks.sql
+│   └── quality_checks_gold.sql
 │
 ├── LICENSE
 └── README.md
+
 
 ---
 
