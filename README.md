@@ -37,46 +37,25 @@ Even though this project is SQL-only, it demonstrates how data flows from **raw 
 
 ## 🧱 Project Folder Structure
 
-.
-├── datasets
-│   ├── crm
-│   │   ├── crm_cust_info.csv
-│   │   ├── crm_prd_info.csv
-│   │   └── crm_sales_details.csv
-│   └── erp
-│       ├── erp_cust_az12.csv
-│       ├── erp_loc_a101.csv
-│       └── erp_px_cat_g1v2.csv
+sql-data-warehouse-project/
 │
-├── docs
-│   ├── data_architecture.png
-│   ├── data_catalog.md
-│   ├── data_flow.png
-│   ├── data_integration.png
-│   └── data_model.png
+├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
 │
-├── scripts
-│   ├── bronze
-│   │   ├── ddl_bronze.sql
-│   │   └── proc_load_bronze.sql
-│   ├── silver
-│   │   └── init_database.sql
-│   └── gold
-│       └── ddl_gold.sql
+├── docs/                               # Project documentation and architecture details
+│   ├── data_architecture.png           # Draw.io file shows the project's architecture
+│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
+│   ├── data_flow.png                   # Draw.io file for the data flow diagram
+│   ├── data_model.png                  # Draw.io file for data models (star schema)
 │
-├── tests
-│   ├── crm_cust_info_checks.sql
-│   ├── crm_prd_info_checks.sql
-│   ├── crm_sales_details_checks.sql
-│   ├── erp_cust_az12_checks.sql
-│   ├── erp_loc_a101_checks.sql
-│   ├── erp_px_cat_g1v2_checks.sql
-│   └── quality_checks_gold.sql
+├── scripts/                            # SQL scripts for ETL and transformations
+│   ├── bronze/                         # Scripts for extracting and loading raw data
+│   ├── silver/                         # Scripts for cleaning and transforming data
+│   ├── gold/                           # Scripts for creating analytical models
 │
-├── LICENSE
-└── README.md
-
-8 directories, 26 files
+├── tests/                              # Test scripts and quality files
+│
+├── README.md                           # Project overview and instructions
+├── LICENSE                             # License information for the repository
 
 
 
