@@ -1,82 +1,115 @@
-# 🧱 SQL Data Warehouse Project (Medallion Architecture)
+# 🏗️ SQL Data Warehouse Project (Medallion Architecture)
 
 ## 📘 Overview
 
-This project is part of my SQL learning journey, based on the **Data with Baraa (30-hour)** course.
-The goal is to **build a complete Data Warehouse** using SQL — focusing on data modeling, ETL logic, and layer-wise data transformation using the **Medallion Architecture**.
+This project is part of my SQL learning journey, inspired by the **Data with Baraa (30-hour)** course.  
+It focuses on building a complete **Data Warehouse** using SQL — covering **data modeling, ETL logic**, and **layer-wise data transformation** using the **Medallion Architecture**.
 
-Even though this project is SQL-only, it aims to demonstrate how data flows from raw sources to analytics-ready models.
+Even though this project is SQL-only, it demonstrates how data flows from **raw sources** to **analytics-ready models**.
 
 ---
 
+## 🧭 Data Architecture Diagram
+
+<img width="1471" height="716" alt="data_flow" src="https://github.com/user-attachments/assets/a213380e-db5d-4242-ba36-e792b320d163" />
+
 ## 🧩 Architecture Overview
 
-**Layers of the Medallion Architecture:**
+### 🥉 Bronze Layer (Raw Data)
+- Data loaded **as-is** from source CSV files.  
+- **Batch load** using truncate & insert.  
+- **No transformation** applied.
 
-1. **Bronze Layer (Raw Data)**
+### 🥈 Silver Layer (Clean Data)
+- Data **cleaned, standardized, and normalized**.  
+- **Data enrichment** and **validation** applied.  
+- Batch load with **truncate & insert** strategy.
 
-   * Data loaded as-is from source files
-   * Batch processing: full load, truncate & insert
-   * No transformation
-   * Data Model: None (as-is)
+### 🥇 Gold Layer (Business-Ready Data)
+- **Views** for analytical consumption.  
+- Integrates, aggregates, and applies **business logic**.  
+- **Star schema** model used for reporting and BI.
 
-2. **Silver Layer (Clean Data)**
-
-   * Data cleaned, standardized, and normalized
-   * Batch load with truncate & insert
-   * Transformations:
-
-     * Data cleaning
-     * Data standardization
-     * Data enrichment
-   * Data Model: None (as-is)
-
-3. **Gold Layer (Business-Ready Data)**
-
-   * Object Type: Views
-   * Transformations:
-
-     * Data integration
-     * Data aggregation
-     * Business logic
-   * Data Model:
-
-     * Star schema
-     * Flat tables
-     * Aggregated tables
-
-**Flow:**
+**Data Flow:**  
 `Source Files → Bronze (Raw Tables) → Silver (Cleaned Tables) → Gold (Business Views)`
 
 ---
 
+## 🧱 Project Folder Structure
+
+
+SQL-Data-Warehouse/
+│
+├── datasets/
+│ ├── crm/
+│ │ ├── crm_cust_info.csv
+│ │ ├── crm_prd_info.csv
+│ │ └── crm_sales_details.csv
+│ │
+│ ├── erp/
+│ ├── erp_cust_az12.csv
+│ ├── erp_loc_a101.csv
+│ └── erp_px_cat_g1v2.csv
+│
+├── docs/
+│ ├── data_architecture.png
+│ ├── data_catalog.md
+│ ├── data_flow.png
+│ ├── data_integration.png
+│ └── data_model.png
+│
+├── scripts/
+│ ├── bronze/
+│ │ ├── ddl_bronze.sql
+│ │ └── proc_load_bronze.sql
+│ │
+│ ├── silver/
+│ │ └── init_database.sql
+│ │
+│ └── gold/
+│ └── ddl_gold.sql
+│
+├── tests/
+│ ├── crm_cust_info_checks.sql
+│ ├── crm_prd_info_checks.sql
+│ ├── crm_sales_details_checks.sql
+│ ├── erp_cust_az12_checks.sql
+│ ├── erp_loc_a101_checks.sql
+│ ├── erp_px_cat_g1v2_checks.sql
+│ └── quality_checks_gold.sql
+│
+├── LICENSE
+└── README.md
+
+---
+
 ## ⚙️ Technology Used
-
-* **Language:** SQL
-* **Database:** SQL Server
-* **Tools:** SQL Server Management Studio 2021
-
-*(You can update this once you finalize your environment.)*
+- **Language:** SQL  
+- **Database:** SQL Server  
+- **Tool:** SQL Server Management Studio (SSMS 2021)  
 
 ---
 
 ## 🎯 Project Goals
-
-* Understand **data warehousing fundamentals** using SQL
-* Practice **ETL and transformation logic** directly in SQL
-* Learn to design **Medallion-style architecture** for structured data
-* Build strong foundations before integrating Python or Spark later
+- Understand **data warehousing fundamentals** using SQL.  
+- Practice **ETL and transformation logic** directly within SQL.  
+- Learn to design **Medallion-style architecture** for structured datasets.  
+- Build strong foundations before integrating **Python** or **Spark**.
 
 ---
 
 ## 🧠 Learning Notes
-
-> This project is a work in progress.
-> The aim is to focus on **SQL data transformation logic** and **understanding architecture**, not on tools or automation (for now).
+This project is a **work in progress** — the main focus is understanding **SQL-based transformations** and **data architecture**, not automation or orchestration (yet).
 
 ---
 
-## 🪪 Author
+## 👤 About Me
+Hi, I’m **Sushant Shirsekar** — I’ve worked **1.5 years as an Android Developer** and am now exploring **Data Engineering** through hands-on SQL projects.  
+I’m currently looking for opportunities that align with my skills and passion for data — **any role that fits my background would be appreciated.**
 
-**Sushant Shirsekar**
-*Exploring Data Engineering through hands-on SQL projects.*
+📩 **Email:** sushantshirsekar54@gmail.com  
+🔗 **LinkedIn:** [www.linkedin.com/in/sushant-shirsekar-886229222](https://www.linkedin.com/in/sushant-shirsekar-886229222)
+
+---
+
+⭐ **If you found this project insightful, consider giving it a star on GitHub!**
